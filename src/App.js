@@ -33,9 +33,18 @@ const sliceStart = sliceEnd - perPage; // 第20筆 - 每頁有幾筆＝第10筆
 const currentPost = data.slice(sliceStart,sliceEnd);
 const totalItems = data.length; 
 
-const changePage = (num) => setCurrentPage(num);
-const goToPrevPage = (currentPage) => setCurrentPage(currentPage-1);
-const goToNextPage = (currentPage) => setCurrentPage(currentPage+1);
+const changePage = (e,num) => {
+  e.preventDefault();
+  setCurrentPage(num)
+}
+const goToPrevPage = (e,currentPage) => {
+  e.preventDefault();
+  setCurrentPage(currentPage-1)
+}
+const goToNextPage = (e,currentPage) => {
+  e.preventDefault();  
+  setCurrentPage(currentPage+1)
+}
 
 
 

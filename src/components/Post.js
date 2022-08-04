@@ -9,7 +9,8 @@ export const Post = ({ loading, data }) => {
   const [toggle, setToggle]=useState({});
 
   // 顯示單筆文章
-  const toggleArticle = (id) =>{
+  const toggleArticle = (e,id) =>{
+    e.preventDefault();
     setToggle({
       ...toggle,
       [id]: !toggle[id]
@@ -21,7 +22,7 @@ export const Post = ({ loading, data }) => {
       <ul className='list-group mt-4'>
         {data.map(item =>
           <li key={item.id} className='list-group-item'>
-            <a className='text-decoration-none' href="!#" onClick={() => toggleArticle(item.id)}>
+            <a className='text-decoration-none' href="!#" onClick={(e) => toggleArticle(e,item.id)}>
               {item.title}
             </a>
             <p className={`${toggle[item.id] ? `d-block`:`d-none`}`}>
