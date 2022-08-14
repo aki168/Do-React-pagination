@@ -1,3 +1,5 @@
+[元件練習-查看DEMO](https://aki168.github.io/Do-React-pagination/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
